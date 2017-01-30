@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.admin.myfinalproject.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:transitionGroup="false">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:id="@+id/toolbar"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.example.admin.myfinalproject.SettingActivity">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:clickable="false"
+            android:gravity="left|center_vertical"
+            android:id="@+id/textView"
+            android:visibility="invisible"
+            android:text="NULL:19:NULL:NULL" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearlayout_1"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_below="@+id/textView">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:id="@+id/bt_up_left"
+                android:text="左前方"
+                android:background="@drawable/app_bt_selector" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="34dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:id="@+id/bt_up"
+                android:text="正前方"
+                android:background="@drawable/app_bt_selector" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:id="@+id/bt_up_right"
+                android:text="右前方"
+                android:background="@drawable/app_bt_selector" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearlayout_1"
+            android:id="@+id/linearlayout_2"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:id="@+id/bt_down_left"
+                android:text="左后方"
+                android:background="@drawable/app_bt_selector" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="34dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:id="@+id/bt_down"
+                android:text="正后方"
+                android:background="@drawable/app_bt_selector"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:id="@+id/bt_down_right"
+                android:text="右后方"
+                android:background="@drawable/app_bt_selector" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearlayout_2"
+            android:text="周围车辆与本车距离(/m)"
+            android:textColor="#ffffff"
+            android:padding="2dp"
+            android:id="@+id/text_1" />
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_1"
+            android:layout_margin="4dp"
+            android:background="#d6d7d7"
+            android:padding="4dp"
+            android:max="20"
+            android:id="@+id/seekBar"
+            android:progress="0" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/seekBar"
+            android:orientation="horizontal"
+            android:id="@+id/linearlayout_3">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/text_2"
+                android:layout_weight="1"
+                android:text="20"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/text_3"
+                android:layout_weight="1"
+                android:text="15"
+                android:textColor="#ffffff"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/text_4"
+                android:layout_weight="1"
+                android:text="10"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/text_5"
+                android:layout_weight="1"
+                android:text="5"
+                android:textColor="#ffffff"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textColor="#ffffff"
+            android:layout_alignRight="@+id/linearlayout_3"
+            android:layout_alignBottom="@+id/linearlayout_3" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/seekBar"
+            android:layout_marginTop="20dp"
+            android:id="@+id/linearlayout_4"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="120dp"
+                android:layout_height="34dp"
+                android:layout_margin="4dp"
+                android:id="@+id/bt_light"
+                android:text="红绿灯信息"
+                android:background="@drawable/app_bt_selector"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:layout_weight="1"
+                    android:layout_margin="4dp"
+                    android:id="@+id/bt_work"
+                    android:text="施工信息"
+                    android:background="@drawable/app_bt_selector"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:layout_weight="1"
+                    android:layout_margin="4dp"
+                    android:id="@+id/bt_limit"
+                    android:text="限速信息"
+                    android:background="@drawable/app_bt_selector" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:layout_weight="1"
+                    android:layout_margin="4dp"
+                    android:id="@+id/bt_people"
+                    android:text="行人信息"
+                    android:background="@drawable/app_bt_selector"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:layout_weight="1"
+                    android:layout_margin="4dp"
+                    android:id="@+id/bt_school"
+                    android:text="学校路段"
+                    android:background="@drawable/app_bt_selector" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:layout_weight="1"
+                    android:layout_margin="4dp"
+                    android:id="@+id/bt_service"
+                    android:text="服务区情况"
+                    android:background="@drawable/app_bt_selector"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_below="@+id/linearlayout_4"
+            android:layout_marginTop="30dp"
+            android:id="@+id/bt_commit"
+            android:text="演示"
+            android:background="@drawable/app_bt_selector"
+            android:padding="5dp" />
+
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

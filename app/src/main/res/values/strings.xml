@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My Final Project</string>
+    <string name="action_ui">显示页面</string>
+    <string name="action_control">控制页面</string>
+</resources>
